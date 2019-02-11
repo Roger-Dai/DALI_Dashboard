@@ -1,13 +1,16 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, FlatList, ActivityIndicator, Image} from 'react-native';
 import {Container, Header, Content, Text, List, ListItem, Thumbnail, Left, Body, Right, Button, Item, Icon, Input } from 'native-base';
-import {createStackNavigator, createAppContainer} from 'react-navigation';
 
 export default class App extends Component<Props> {
   
   constructor(props){
     super(props);
-    this.state ={ isLoading: true}
+    this.state ={
+      isLoading: true,
+      data: []
+    }
+    this.arrayholder = [];
   }
 
   componentDidMount(){
@@ -20,7 +23,7 @@ export default class App extends Component<Props> {
         }, function(){
 
         });
-
+        this.arrayholder = responseJson
       })
       .catch((error) =>{
         console.error(error);
@@ -46,6 +49,18 @@ export default class App extends Component<Props> {
     </ListItem>
   );
 
+  searchFilterFunction = text => {
+    console.log(this.arrayholder);
+    const newData = this.arrayholder.filter(item => {
+      const itemData = `${item.name.toUpperCase()}`;
+      const textData = text.toUpperCase();
+      return itemData.indexOf(textData) > -1;
+    });
+    this.setState({
+      dataSource: newData,
+    });
+  };
+
 
   render() {
 
@@ -62,7 +77,10 @@ export default class App extends Component<Props> {
         <Header searchBar rounded>
           <Item>
             <Icon name="ios-search" />
-            <Input placeholder="Search" />
+            <Input 
+              placeholder="Search by name" 
+              onChangeText={text => this.searchFilterFunction(text)}
+            />
             <Icon name="ios-people" />
           </Item>
           <Button transparent>
