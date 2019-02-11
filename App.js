@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, FlatList, ActivityIndicator, Image} from 'react-native';
 import {Container, Header, Content, Text, List, ListItem, Thumbnail, Left, Body, Right, Button, Item, Icon, Input } from 'native-base';
+import Geocoder from 'react-native-geocoding';
 
 export default class App extends Component<Props> {
   
@@ -30,6 +31,15 @@ export default class App extends Component<Props> {
       });
   }
 
+  getLoc(lat, long){
+    Geocoder.init('AIzaSyAq8be20wkIOJkJqbeRAMJFCLGj7YmTSYk');
+    Geocoder.from(lat, long).then(json => {
+        	var addressComponent = json.results[0].formatted_address;
+            alert(addressComponent);
+        })
+        .catch(error => console.warn(error));
+  }
+
   _renderItem = ({item}) => (
     <ListItem avatar>
       <Left>
@@ -42,9 +52,10 @@ export default class App extends Component<Props> {
         <Text>Projects: {item.project}</Text>
       </Body>
       <Right>
-        <Button transparent>
-          <Text>View</Text>
-        </Button>
+        <Button transparent
+        onPress={()=>{this.getLoc(item.lat_long[0],item.lat_long[1])}}>
+          <Text>Home</Text>
+        </Button> 
       </Right>
     </ListItem>
   );
@@ -83,9 +94,6 @@ export default class App extends Component<Props> {
             />
             <Icon name="ios-people" />
           </Item>
-          <Button transparent>
-            <Text>Search</Text>
-          </Button>
         </Header>
         <FlatList
           data={this.state.dataSource}
