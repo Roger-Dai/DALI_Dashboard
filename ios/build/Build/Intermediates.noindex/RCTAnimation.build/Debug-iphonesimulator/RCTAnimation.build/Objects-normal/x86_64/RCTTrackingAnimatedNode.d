@@ -1,0 +1,30 @@
+dependencies: \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/node_modules/react-native/Libraries/NativeAnimation/Nodes/RCTTrackingAnimatedNode.m \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/node_modules/react-native/Libraries/NativeAnimation/Nodes/RCTTrackingAnimatedNode.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/node_modules/react-native/Libraries/NativeAnimation/Nodes/RCTAnimatedNode.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/node_modules/react-native/Libraries/NativeAnimation/Nodes/RCTValueAnimatedNode.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/node_modules/react-native/Libraries/NativeAnimation/RCTNativeAnimatedNodesManager.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUIManager.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTViewManager.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTConvert.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAnimationType.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBorderStyle.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTPointerEvents.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTEventDispatcher.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/UIView+React.h \
+  /Users/daitianxing/Documents/Main/Dartmouth/DALI/DALI_Dashboard/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h
