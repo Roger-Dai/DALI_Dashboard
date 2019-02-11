@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, FlatList, ActivityIndicator, Image} from 'react-native';
 import {Container, Header, Content, Text, List, ListItem, Thumbnail, Left, Body, Right, Button, Item, Icon, Input } from 'native-base';
+import {createStackNavigator, createAppContainer} from 'react-navigation';
 
 export default class App extends Component<Props> {
   
@@ -13,7 +14,6 @@ export default class App extends Component<Props> {
     return fetch('http://mappy.dali.dartmouth.edu/members.json')
       .then((response) => response.json())
       .then((responseJson) => {
-
         this.setState({
           isLoading: false,
           dataSource: responseJson,
@@ -28,25 +28,15 @@ export default class App extends Component<Props> {
   }
 
   _renderItem = ({item}) => (
-    // <View style={{backgroundColor: 'white'}}>
-    //     <Image
-    //       style={{width: 50, height: 50}}
-    //       source={{uri: `http://mappy.dali.dartmouth.edu/${item.iconUrl}`}}
-    //     />
-    //     <Text style={{fontSize: 20, marginTop: 20, marginLeft: 10}}>
-    //         {item.name}
-    //     </Text>
-    //     <Text style={{fontSize: 15, color: 'grey', marginTop: 5, marginLeft: 10}} >
-    //         {item.message}
-    //     </Text>
-    // </View>
     <ListItem avatar>
       <Left>
         <Thumbnail source={{ uri: `http://mappy.dali.dartmouth.edu/${item.iconUrl}` }} />
       </Left>
       <Body>
-        <Text>{item.name}</Text>
+        <Text style={{fontWeight: 'bold'}}>{item.name}</Text>
         <Text>{item.message}</Text>
+        <Text>I am on during term(s) {item.terms_on}</Text>
+        <Text>Projects: {item.project}</Text>
       </Body>
       <Right>
         <Button transparent>
@@ -54,13 +44,8 @@ export default class App extends Component<Props> {
         </Button>
       </Right>
     </ListItem>
-    // <ListItem
-    //   roundAvatar
-    //   title={`${item.name}`}
-    //   subtitle={item.message}
-    //   avatar={{ uri: `http://mappy.dali.dartmouth.edu/${item.iconUrl}` }}
-    // />
   );
+
 
   render() {
 
@@ -95,6 +80,3 @@ export default class App extends Component<Props> {
     );
   }
 }
-
-const styles = StyleSheet.create({
-});
