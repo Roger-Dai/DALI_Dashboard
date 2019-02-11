@@ -1,21 +1,6 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- * @lint-ignore-every XPLATJSCOPYRIGHT1
- */
-
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, FlatList, ActivityIndicator} from 'react-native';
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import {StyleSheet, View, FlatList, ActivityIndicator, Image} from 'react-native';
+import {Container, Header, Content, Text, List, ListItem, Thumbnail, Left, Body, Right, Button, Item, Icon, Input } from 'native-base';
 
 export default class App extends Component<Props> {
   
@@ -43,31 +28,39 @@ export default class App extends Component<Props> {
   }
 
   _renderItem = ({item}) => (
-    <View style={{backgroundColor: 'white'}}>
-        {/* <Image
-          style={{width: 50, height: 50}}
-          source={{uri: 'http://mappy.dali.dartmouth.edu/images/ricky.jpg'}}
-        /> */}
-        <Text style={{fontSize: 20, marginTop: 20, marginLeft: 10}}>
-            {item.name}
-        </Text>
-        <Text style={{fontSize: 15, color: 'grey', marginTop: 5, marginLeft: 10}} >
-            {item.message}
-        </Text>
-    </View>
+    // <View style={{backgroundColor: 'white'}}>
+    //     <Image
+    //       style={{width: 50, height: 50}}
+    //       source={{uri: `http://mappy.dali.dartmouth.edu/${item.iconUrl}`}}
+    //     />
+    //     <Text style={{fontSize: 20, marginTop: 20, marginLeft: 10}}>
+    //         {item.name}
+    //     </Text>
+    //     <Text style={{fontSize: 15, color: 'grey', marginTop: 5, marginLeft: 10}} >
+    //         {item.message}
+    //     </Text>
+    // </View>
+    <ListItem avatar>
+      <Left>
+        <Thumbnail source={{ uri: `http://mappy.dali.dartmouth.edu/${item.iconUrl}` }} />
+      </Left>
+      <Body>
+        <Text>{item.name}</Text>
+        <Text>{item.message}</Text>
+      </Body>
+      <Right>
+        <Button transparent>
+          <Text>View</Text>
+        </Button>
+      </Right>
+    </ListItem>
+    // <ListItem
+    //   roundAvatar
+    //   title={`${item.name}`}
+    //   subtitle={item.message}
+    //   avatar={{ uri: `http://mappy.dali.dartmouth.edu/${item.iconUrl}` }}
+    // />
   );
-
-  _renderSeparator = () => {
-    return (
-        <View
-        style={{
-            height: 1,
-            width: "100%",
-            backgroundColor: "#CED0CE",
-        }}
-        />
-    )
-  };
 
   render() {
 
@@ -80,37 +73,28 @@ export default class App extends Component<Props> {
     }
 
     return (
-      <View style={styles.container}>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+      <Container>
+        <Header searchBar rounded>
+          <Item>
+            <Icon name="ios-search" />
+            <Input placeholder="Search" />
+            <Icon name="ios-people" />
+          </Item>
+          <Button transparent>
+            <Text>Search</Text>
+          </Button>
+        </Header>
         <FlatList
           data={this.state.dataSource}
-          renderItem={({item}) => <Text>{item.name}, {item.message}</Text>}
-          keyExtractor={({id}, index) => index}
+          renderItem={this._renderItem}
+          keyExtractor={item => item.iconUrl}
           onEndReachedThreshold={0.1}
-          ItemSeparatorComponent={this._renderSeparator}
-          style={{marginBottom: 25}}
+          style={{marginBottom: 2}}
         />
-      </View>
+      </Container>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
 });
