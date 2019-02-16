@@ -14,7 +14,11 @@ If you do not have npm installed on your computer, visit: https://www.npmjs.com/
 ### Running the App
 If you have all the prerequisites and dependencies ready, to start the program, you just need to run
 ```
-npm start
+react-native run-ios
+```
+or
+```
+react-native run-android
 ```
 This should automatically launch your iOS/Android simulator, and display the app.
 ## What is it?
