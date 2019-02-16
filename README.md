@@ -22,4 +22,4 @@ react-native run-android
 ```
 This should automatically launch your iOS/Android simulator, and display the app.
 ## What is it?
-This project is a code challenge for the DALI Lab application. This is an app that displays real data, including avatar photos, from the DALI Lab website, of its members. It also has a dynamic search bar that allows you to search the members by name. It decodes the location of each member's address using the Google Maps API. Under the current API key, only one access per day is allowed. This could be easily changed by upgrading the Google Cloud Platform services.
+This project is a code challenge for the DALI Lab application. This is an app that displays real data, including avatar photos, from the DALI Lab website, of its members. It also has a dynamic search bar that allows you to search the members by name. It decodes the location of each member's address using the Google Maps API. 
