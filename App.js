@@ -32,7 +32,7 @@ export default class App extends Component<Props> {
   }
 
   getLoc(lat, long){
-    Geocoder.init('AIzaSyAq8be20wkIOJkJqbeRAMJFCLGj7YmTSYk');
+    Geocoder.init('AIzaSyBnE_UZSrCiRghsE4ae5vYKbKQYQesEC0U');
     Geocoder.from(lat, long).then(json => {
         	var addressComponent = json.results[0].formatted_address;
             alert(addressComponent);
