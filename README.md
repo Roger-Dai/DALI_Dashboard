@@ -20,6 +20,10 @@ or
 ```
 react-native run-android
 ```
-This should automatically launch your iOS/Android simulator, and display the app.
+This should automatically launch your iOS/Android simulator, and display the app. If the commands above does not work, try
+```
+npm start
+```
+Sometimes the way to successfully launch the simulator and the app depends on individual environments.
 ## What is it?
 This project is a code challenge for the DALI Lab application. This is an app that displays real data, including avatar photos, from the DALI Lab website, of its members. It also has a dynamic search bar that allows you to search the members by name. It decodes the location of each member's address using the Google Maps API. 
